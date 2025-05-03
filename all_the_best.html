@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All the Best & Good Luck</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      padding: 2rem;
+    }
+
+    .all-the-best {
+      color: #2e8b57; /* SeaGreen */
+    }
+
+    .good-luck {
+      color: #1e90ff; /* DodgerBlue */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <script>
+      const container = document.querySelector('.container');
+      for (let i = 0; i < 1000; i++) {
+        const span = document.createElement('span');
+        if (i % 2 === 0) {
+          span.textContent = 'All the best ';
+          span.className = 'all-the-best';
+        } else {
+          span.textContent = 'Good luck ';
+          span.className = 'good-luck';
+        }
+        container.appendChild(span);
+      }
+    </script>
+  </div>
+</body>
+</html>
